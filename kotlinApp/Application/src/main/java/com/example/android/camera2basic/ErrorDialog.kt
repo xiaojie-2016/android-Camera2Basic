@@ -28,8 +28,8 @@ class ErrorDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
             AlertDialog.Builder(activity)
-                    .setMessage(arguments.getString(ARG_MESSAGE))
-                    .setPositiveButton(android.R.string.ok) { _, _ -> activity.finish() }
+                    .setMessage(arguments?.getString(ARG_MESSAGE))
+                    .setPositiveButton(android.R.string.ok) { _, _ -> requireActivity().finish() }
                     .create()
 
     companion object {
